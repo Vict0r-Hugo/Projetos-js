@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>controle financeiro</title>
+</head>
+<body>
+    <script>
+        let continuee = 3
+        let opera = 0
+        let dinheiro = parseFloat(prompt('Qual o total de dinheiro disponivel?')
+            )
+        do{
+            continuee = parseFloat(prompt(
+                'Você possui um saldo de ' + dinheiro + ' !\n' +
+                '1. Adcionar dinheiro\n' +
+                '2. remover dinheiro\n' +
+                '3. Sair'
+            ))
+        
+            switch (continuee) {
+            case 1:
+                opera = parseFloat(prompt('Quanto deseja adicionar?'))
+                dinheiro += opera
+                alert('Seu novo saldo é de ' + dinheiro + ' !')
+                break;
+
+            case 2:
+                opera = parseFloat(prompt('Quanto deseja retirar?'))
+                dinheiro -= opera
+                alert('Seu novo saldo é de ' + dinheiro + ' !')
+                 break;
+
+            case 3:
+                alert('Encerrando...')
+                break;
+
+            default:
+                (alert('Insira um codigo correspondente!'))
+                break;
+            }
+        }
+        while(continuee !== 3)
+    </script>
+</body>
+</html>

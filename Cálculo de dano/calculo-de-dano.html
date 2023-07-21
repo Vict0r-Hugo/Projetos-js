@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cauculo de dano</title>
+</head>
+<body>
+    <script>
+        const nomePerso1 = prompt('Qual o nome do primeiro personagem?') 
+        const ataquePerso1 = parseFloat(prompt('Qual o poder de ataque do priemiro personagem?')) 
+        const nomePerso2 = prompt ('Qual o nome do segundo personagem?')
+        const vidaperso2 = parseFloat(prompt ('Quanto de vida possui o segundo Personagem?'))
+        const defesaPerso2 = parseFloat(prompt ('Qual o poder de defesa do segundo personagem?'))
+        let escudoPerso2 = prompt ('O segundo personagem possui escudo? (Insira 00 para vedadeiro e 01 para falso)')
+        let danoSofrido = 0
+        let vidaRestante = 0
+
+        if (ataquePerso1 > defesaPerso2 && escudoPerso2 == '01'){
+            danoSofrido = ataquePerso1 - defesaPerso2
+            escudoPerso2 = 'não possui escudo!'
+        }
+        else if(ataquePerso1 > defesaPerso2 && escudoPerso2 == '00'){
+            danoSofrido = (ataquePerso1 - defesaPerso2) / 2
+            escudoPerso2 == '00'
+        }
+        
+        else if (escudoPerso2 == '00') {
+            escudoPerso2 == '00'
+        }
+
+        else if (escudoPerso2 == '01'){
+            'não possui escudo!'
+        }
+
+        vidaRestante = vidaperso2 - danoSofrido
+        
+        alert ('O personagem' + ' ' + nomePerso2 + ' ' + 'sofreu' + ' ' + danoSofrido + ' ' + 'de dano!')
+        alert('O personagem' + ' ' + nomePerso1 + ' ' + 'possui um ataque de' + ' ' + ataquePerso1)
+        alert ('O personagem' + ' ' + nomePerso2 + ' ' + 'possui' + ' ' + vidaRestante + ' ' + 'de vida e'+ ' ' + escudoPerso2)
+
+    </script>
+</body>
+</html>
